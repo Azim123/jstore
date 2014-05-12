@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="85d1cbb0-631e-4774-8b82-6f8d744cfd1a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_0_4_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jstore.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jstore_war.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/jstore_war_exploded.xml" />
-      <change type="DELETED" beforePath="D:\Install\MyProjects\jstore\index.html" afterPath="" />
-      <change type="DELETED" beforePath="D:\Install\MyProjects\jstore\test.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jstore.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,7 +78,7 @@
       <file leaf-file-name="HelloWorldServlet.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uz/micros/HelloWorldServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="239" selection-end="239" vertical-scroll-proportion="0.21929824" vertical-offset="0" max-vertical-offset="400">
+            <state line="16" column="1" selection-start="545" selection-end="545" vertical-scroll-proportion="0.73099416" vertical-offset="0" max-vertical-offset="400">
               <folding />
             </state>
           </provider>
@@ -281,7 +266,7 @@
       <recent name="uz.micros" />
     </key>
   </component>
-  <component name="RunManager" selected="Jetty Server.Jetty">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 8.0.5">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin" singleton="true">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
@@ -802,6 +787,22 @@
       </server-settings>
       <predefined_log_file id="Jetty" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method>
         <option name="BuildArtifacts" enabled="true">
           <artifact name="jstore:war exploded" />
@@ -826,12 +827,12 @@
       <workItem from="1399301214972" duration="1447000" />
       <workItem from="1399468255101" duration="5926000" />
       <workItem from="1399714399211" duration="1125000" />
-      <workItem from="1399900183170" duration="2039000" />
+      <workItem from="1399900183170" duration="2404000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10537000" />
+    <option name="totallyTimeSpent" value="10902000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="860" extended-state="0" />
@@ -939,7 +940,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uz/micros/HelloWorldServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="239" selection-end="239" vertical-scroll-proportion="0.21929824" vertical-offset="0" max-vertical-offset="400">
+        <state line="16" column="1" selection-start="545" selection-end="545" vertical-scroll-proportion="0.73099416" vertical-offset="0" max-vertical-offset="400">
           <folding />
         </state>
       </provider>
