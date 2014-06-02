@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="master">
+
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Blog Index</title>
+</head>
+<body>
+
+<section layout:fragment="content">
+
+    <div class="row-fluid">
+
+        <div class="col-md-6">
+            <div class="hero-unit">
+                <h2>
+                    <a th:href="@{'/blog/posts/' + ${post.id}}" th:text="${post.subject}">
+
+                    </a>
+                </h2>
+
+                <p th:text="${post.date}" class="post_date"></p>
+
+                <p th:text="${post.text}"></p>
+
+
+                <input type="button" class="btn btn-info btn-xlarge" value="I like it!!!"/>
+
+
+            </div>
+
+            <h1>Comments</h1>
+
+            <form class="form-horizontal row" th:action="@{/blog/comments}" method="post" th:object = "${newComment}">
+                <div class="form-group">
+                    <label for="inputName" class="col-md-2 control-label">Name</label>
+                    <div class="col-md-10">
+                        <input type="text" id="inputName" class="form-control" placeholder="Name"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputComment" class="col-md-2 control-label">Comment</label>
+                    <div class="col-md-10">
+                        <textarea th:field = "*{text}" id="inputComment" cols="61" rows="5"></textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="submit" value="Submit" class="btn btn-success btn-xlarge  pull-right"/>
+                    </div>
+                </div>
+            </form>
+
+            <div class="row-fluid" th:each="comment : ${post.comments}">
+                <div class="col-md-12 well well-large comment_block">
+                    <p class="post_date" th:text="${comment.date}"></p>
+
+                    <p class="post_author" th:text="${comment.author}"></p>
+
+                    <hr/>
+
+                    <p class="post-text" th:text="${comment.text}"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+</body>
+</html>
