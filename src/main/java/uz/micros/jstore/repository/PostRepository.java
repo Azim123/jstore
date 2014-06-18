@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import uz.micros.jstore.entity.blog.Post;
-import uz.micros.jstore.util.DbManager;
+
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;
@@ -18,8 +18,6 @@ public class PostRepository {
 
     @Autowired
     private SessionFactory sessionFactory;
-
-    private class PostMapper extends Mapper<Post>{};
 
     public void addPost(Post post){
 
@@ -39,21 +37,9 @@ public class PostRepository {
 
     @Transactional
     public List<Post> getPosts() {
-        List<Post> res = new ArrayList<>();
 
         Session session = sessionFactory.getCurrentSession();
 
-        res =  session.createQuery("from Post").list();
-
-        /*List<Map<String, Object>> list = DbManager.runQuery("select * from posts");
-
-        for(Map<String, Object> item: list){
-
-            Post p = new PostMapper().map(item);
-
-            res.add(p);
-        }
-*/
-        return res;
+        return session.createQuery("from Post").list();
     }
 }

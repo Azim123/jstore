@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import uz.micros.jstore.entity.blog.Blog;
 import uz.micros.jstore.entity.blog.Post;
 import uz.micros.jstore.repository.PostRepository;
-import uz.micros.jstore.util.DbManager;
+
 
 import java.sql.Connection;
 import java.util.ArrayList;
