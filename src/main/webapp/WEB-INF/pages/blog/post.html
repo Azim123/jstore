@@ -26,6 +26,11 @@
 
                 <p th:text="${post.text}"></p>
 
+                <div class="pull-right">
+                    <a class="btn btn-default" th:href="@{'/blog/posts/edit/' + ${post.id}}">Edit</a>
+                    <a class="btn btn-danger" th:href="@{'/blog/posts/delete/' + ${post.id}}">Delete</a>
+                </div>
+
 
                 <input type="button" class="btn btn-info btn-xlarge" value="I like it!!!"/>
 
@@ -35,6 +40,7 @@
             <h1>Comments</h1>
 
             <form class="form-horizontal row" th:action="@{/blog/comments}" method="post" th:object = "${newComment}">
+                <input type="hidden" th:field = "*{post.id}"/>
                 <div class="form-group">
                     <label for="inputName" class="col-md-2 control-label">Name</label>
                     <div class="col-md-10">

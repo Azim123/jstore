@@ -17,18 +17,40 @@ public class PostController {
     private PostService service;
 
     @RequestMapping("/{id}/**")
-    public ModelAndView getPost(@PathVariable int id){
+    public ModelAndView getPost(@PathVariable int id) {
 
         Post post = service.get(id);
 
-        if(post != null){
+        if (post != null) {
+
+            Comment comment = new Comment();
+            comment.setPost(post);
             return new ModelAndView("blog/post")
                     .addObject("post", post)
-                    .addObject("newComment", new Comment());
-        }else{
-            return new ModelAndView("redirect:/blog");
+                    .addObject("newComment", comment);
+        } else {
+            return new ModelAndView("redirect:notFound");
         }
-
-
     }
+
+    @RequestMapping("/edit/{id}")
+    public ModelAndView edit(int id){
+        Post post = service.get(id);
+
+        if (post != null) {
+
+            return new ModelAndView("blog/editPost")
+                    .addObject("post", post);
+        } else {
+            return new ModelAndView("redirect:notFound");
+        }
+    }
+
+    @RequestMapping("/delete/{id}")
+    public String delete(@PathVariable("id") int id){
+        service.delete(id);
+
+        return "redirect:/blog";
+    }
+
 }
