@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="master">
+
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>Create New Post</title>
+</head>
+<body>
+
+<section layout:fragment="content">
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2>Create New Post</h2>
+
+            <form action="/blog/posts" method="post" th:object = "${newPost}">
+                <input type="hidden" th:filed = "*{id}"/>
+                <!--<input type="hidden" th:filed = "*{date}"/>
+                <input type="hidden" th:filed = "*{author}"/>-->
+                <div class="row">
+                    <div class="col-md-1">
+                        <label class="control-label">Subject</label>
+                    </div>
+                    <div class="col-md-8">
+                        <input class="form-control" type="text" th:field = "*{subject}"/>
+                    </div>
+                </div>
+
+                <br/><br/>
+
+                <div class="row">
+                    <div class="col-md-1">
+                        <label class="control-label">Text</label>
+                    </div>
+                    <div class="col-md-8">
+                        <textarea cols="90" rows="10" th:field = "*{text}"></textarea>
+                    </div>
+                </div>
+
+                <br/><br/>
+
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="pull-right">
+                            <button class="btn btn-primary" type="submit" >Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

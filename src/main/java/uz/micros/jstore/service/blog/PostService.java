@@ -26,4 +26,18 @@ public class PostService {
     public void delete(int id) {
         postRepository.delete(id);
     }
+
+    public Post save(Post post) {
+        if(post.getId() == 0){
+            post.setDate(new Date());
+            post.setAuthor("admin");
+        }else{
+            Post existing = get(post.getId());
+
+            post.setDate(existing.getDate());
+            post.setAuthor(existing.getAuthor());
+        }
+
+        return postRepository.saveAndFlush(post);
+    }
 }
