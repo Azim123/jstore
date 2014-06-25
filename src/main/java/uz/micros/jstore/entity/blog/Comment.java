@@ -1,16 +1,15 @@
 package uz.micros.jstore.entity.blog;
 
 
+import uz.micros.jstore.entity.BaseEntity;
+
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Table(name = "comments")
-public class Comment {
+public class Comment extends BaseEntity {
 
-    @Id
-    @GeneratedValue
-    private int id;
     private String text;
     private Date date;
     private String author;
@@ -21,15 +20,6 @@ public class Comment {
     @ManyToOne
     @JoinColumn(name = "post_id", nullable = false)
     private Post post;
-
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getText() {
         return text;

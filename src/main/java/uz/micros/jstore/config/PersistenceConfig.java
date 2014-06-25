@@ -50,7 +50,7 @@ public class PersistenceConfig {
     public EntityManagerFactory entityManagerFactory(){
         LocalContainerEntityManagerFactoryBean res = new LocalContainerEntityManagerFactoryBean();
 
-        res.setPackagesToScan("uz.micros.jstore.entity.blog");
+        res.setPackagesToScan("uz.micros.jstore.entity");
         res.setDataSource(getDataSource());
         res.setJpaProperties(getProperties());
         res.setJpaVendorAdapter(getJpaVendorAdapter());
